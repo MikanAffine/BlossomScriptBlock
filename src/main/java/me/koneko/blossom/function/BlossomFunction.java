@@ -38,14 +38,23 @@ public interface BlossomFunction{
     return null;
   };
 
+  BlossomFunction MSG = args -> {
+    Bukkit.getPlayer((String) args[0].get()).sendMessage((String) args[1].get());
+    return null;
+  };
+
   HashMap<String, BlossomFunction> functions = new HashMap<String, BlossomFunction>(){{
     put("sin", SIN);
     put("cos", COS);
     put("tan", TAN);
+    
     put("log", LOG);
+
     put("cmd", CMD);
     put("cmdop", CMDOP);
     put("cmdcon", CMDCON);
+    
+    put("msg", MSG);
   }};
 
 }
