@@ -1,0 +1,11 @@
+name: BlossomScriptBlock
+version: ${project.version}
+main: me.koneko.scriptblock.Main
+author: Konekodesu
+description: Blossom Script Block
+website: github.com/Konekodesu/BlossomScriptBlock
+
+commands:
+  bsb:
+    usage: ""
+    description: ""
