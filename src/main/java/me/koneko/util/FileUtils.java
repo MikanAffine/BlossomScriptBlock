@@ -46,7 +46,7 @@ public final class FileUtils{
     // 我觉得512行差不多了吧
     List<String> result = new ArrayList<>(512);
     String buf = null;
-    try (BufferedReader br = new BufferedReader(new FileReader(f))) {
+    try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(f), "UTF-8"))) {
       while((buf = br.readLine()) != null) result.add(buf);
     } catch (IOException e) {
       e.printStackTrace();
@@ -64,7 +64,7 @@ public final class FileUtils{
   public static String readAsString(File f){
     StringBuilder sb = new StringBuilder();
     String buf = null;
-    try (BufferedReader br = new BufferedReader(new FileReader(f))) {
+    try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(f), "UTF-8"))) {
       while ((buf = br.readLine()) != null) sb.append(buf).append("\n");
     } catch (IOException e) {
       e.printStackTrace();

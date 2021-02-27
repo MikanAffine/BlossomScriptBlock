@@ -30,7 +30,8 @@ public class BsbCmd implements CommandExecutor {
         return true;
       }
       if(args.length != 3){
-        p.sendMessage("/bsb bind 需要3个参数");
+        p.sendMessage("/bsb bind 需要参数");
+        p.sendMessage(HELP[0]);
         return true;
       }
       Block b = ((Player) p).getTargetBlock(null, 10);
@@ -67,7 +68,7 @@ public class BsbCmd implements CommandExecutor {
       "=-=-=-= BlossomScriptBlock  帮助 =-=-=-=",
       "/bsb help - 显示此帮助",
       "",
-      "/bsb bind <类型> <脚本名> - 将该脚本绑定到准星指向的方块",
+      "/bsb bind <触发类型> <脚本名> - 将该脚本绑定到准星指向的方块",
       "<类型>: left_click, right_click, walk, break",
       "<脚本名>: 脚本文件名称",
       "",
